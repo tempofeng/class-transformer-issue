@@ -10,11 +10,11 @@ export class TeamTransaction {
 
     teamId!: string;
     @Type(() => EthAddress)
-    @Transform((value) => new EthAddress(value), {toClassOnly: true})
+    @Transform((value) => EthAddress.create(value), {toClassOnly: true})
     @Transform((value) => value.address, {toPlainOnly: true})
     from!: EthAddress;
     @Type(() => EthAddress)
-    @Transform((value) => new EthAddress(value), {toClassOnly: true})
+    @Transform((value) => EthAddress.create(value), {toClassOnly: true})
     @Transform((value) => value.address, {toPlainOnly: true})
     to!: EthAddress;
 }
