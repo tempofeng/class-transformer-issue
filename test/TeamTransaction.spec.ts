@@ -16,16 +16,8 @@ class TeamTransactionSpec {
         const txJson = `
 {
                 "teamId": "6468a5f1-64d7-4a56-9ba5-e4f66a1d8923",
-                "hash": "0xf888e0acc8329bc6063f48b1c42d71c463de6b36aa551ea6b73a73677d3ee218",
-                "blockNumber": 1871928,
-                "timeStamp": "1970-01-18T14:15:48.000Z",
                 "from": "0xea95a7a25506c9F70fB7bC50877C435a609353b2",
-                "to": "0xf3Ad7a80c7deBE37Db5ceE1E3Ed45f31a5629e5e",
-                "value": "100000000000000000",
-                "currency": "ETH",
-                "fee": "420000000000000",
-                "feeCurrency": "ETH",
-                "type": "Send"
+                "to": "0xf3Ad7a80c7deBE37Db5ceE1E3Ed45f31a5629e5e"
 }`;
 
         // when convert json to TeamTransaction
@@ -36,7 +28,7 @@ class TeamTransactionSpec {
 
         const value = classToPlain(teamTransaction);
         JSON.stringify(value).should.be.eq(
-            `{"teamId":"6468a5f1-64d7-4a56-9ba5-e4f66a1d8923","hash":"0xf888e0acc8329bc6063f48b1c42d71c463de6b36aa551ea6b73a73677d3ee218","blockNumber":1871928,"timeStamp":"1970-01-18T14:15:48.000Z","from":"0xea95a7a25506c9F70fB7bC50877C435a609353b2","to":"0xf3Ad7a80c7deBE37Db5ceE1E3Ed45f31a5629e5e","value":"100000000000000000","currency":"ETH","fee":"420000000000000","feeCurrency":"ETH","type":"Send"}`);
+            `{"teamId":"6468a5f1-64d7-4a56-9ba5-e4f66a1d8923","from":"0xea95a7a25506c9F70fB7bC50877C435a609353b2","to":"0xf3Ad7a80c7deBE37Db5ceE1E3Ed45f31a5629e5e"}`);
     }
 
     @test
@@ -46,29 +38,13 @@ class TeamTransactionSpec {
 [
 {
                 "teamId": "6468a5f1-64d7-4a56-9ba5-e4f66a1d8923",
-                "hash": "0xf888e0acc8329bc6063f48b1c42d71c463de6b36aa551ea6b73a73677d3ee218",
-                "blockNumber": 1871928,
-                "timeStamp": "1970-01-18T14:15:48.000Z",
                 "from": "0xea95a7a25506c9F70fB7bC50877C435a609353b2",
-                "to": "0xf3Ad7a80c7deBE37Db5ceE1E3Ed45f31a5629e5e",
-                "value": "100000000000000000",
-                "currency": "ETH",
-                "fee": "420000000000000",
-                "feeCurrency": "ETH",
-                "type": "Send"
+                "to": "0xf3Ad7a80c7deBE37Db5ceE1E3Ed45f31a5629e5e"
 },
 {
                 "teamId": "6468a5f1-64d7-4a56-9ba5-e4f66a1d8923",
-                "hash": "0xf888e0acc8329bc6063f48b1c42d71c463de6b36aa551ea6b73a73677d3ee218",
-                "blockNumber": 1871928,
-                "timeStamp": "1970-01-18T14:15:48.000Z",
                 "from": "0xea95a7a25506c9F70fB7bC50877C435a609353b2",
-                "to": "0xf3Ad7a80c7deBE37Db5ceE1E3Ed45f31a5629e5e",
-                "value": "100000000000000000",
-                "currency": "ETH",
-                "fee": "420000000000000",
-                "feeCurrency": "ETH",
-                "type": "Send"
+                "to": "0xf3Ad7a80c7deBE37Db5ceE1E3Ed45f31a5629e5e"
 }
 ]`;
 
@@ -81,6 +57,6 @@ class TeamTransactionSpec {
 
         const value = classToPlain(teamTransactions);
         JSON.stringify(value).should.be.eq(
-            `[{"teamId":"6468a5f1-64d7-4a56-9ba5-e4f66a1d8923","hash":"0xf888e0acc8329bc6063f48b1c42d71c463de6b36aa551ea6b73a73677d3ee218","blockNumber":1871928,"timeStamp":"1970-01-18T14:15:48.000Z","from":"0xea95a7a25506c9F70fB7bC50877C435a609353b2","to":"0xf3Ad7a80c7deBE37Db5ceE1E3Ed45f31a5629e5e","value":"100000000000000000","currency":"ETH","fee":"420000000000000","feeCurrency":"ETH","type":"Send"},{"teamId":"6468a5f1-64d7-4a56-9ba5-e4f66a1d8923","hash":"0xf888e0acc8329bc6063f48b1c42d71c463de6b36aa551ea6b73a73677d3ee218","blockNumber":1871928,"timeStamp":"1970-01-18T14:15:48.000Z","from":"0xea95a7a25506c9F70fB7bC50877C435a609353b2","to":"0xf3Ad7a80c7deBE37Db5ceE1E3Ed45f31a5629e5e","value":"100000000000000000","currency":"ETH","fee":"420000000000000","feeCurrency":"ETH","type":"Send"}]`);
+            `[{"teamId":"6468a5f1-64d7-4a56-9ba5-e4f66a1d8923","from":"0xea95a7a25506c9F70fB7bC50877C435a609353b2","to":"0xf3Ad7a80c7deBE37Db5ceE1E3Ed45f31a5629e5e"},{"teamId":"6468a5f1-64d7-4a56-9ba5-e4f66a1d8923","from":"0xea95a7a25506c9F70fB7bC50877C435a609353b2","to":"0xf3Ad7a80c7deBE37Db5ceE1E3Ed45f31a5629e5e"}]`);
     }
 }
